@@ -1,0 +1,1 @@
+web: java -jar target/BillionProject-1.0-SNAPSHOT.jar

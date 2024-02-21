@@ -1,0 +1,30 @@
+{
+  "sshTunnel": {
+    "sshUser": "thangvtm",
+    "sshPassword": "saddragon45",
+    "sshPort": 22,
+    "sshHost": "103.1.238.149",
+    "databaseHost": "localhost",
+    "databasePort": 3306,
+    "localPort": 9991
+  },
+  "databaseConfig": {
+    "classDriver": "com.mysql.cj.jdbc.Driver",
+    "url": "jdbc:mysql://localhost:9991/thangvtm_mcare?serverTimezone=UTC&useLegacyDatetimeCode=false",
+    "username": "thangvtm_mcare",
+    "password": "tMX1HIA1",
+    "database": "thangvtm_mcare"
+  },
+  "jooqGenerator": {
+    "jdbcDriver": "com.mysql.cj.jdbc.Driver",
+    "jdbcUrl": "jdbc:mysql://localhost:9991/thangvtm_mcare?serverTimezone=UTC&useLegacyDatetimeCode=false",
+    "user": "thangvtm_mcare",
+    "password": "tMX1HIA1",
+    "jooqDatabaseName": "org.jooq.meta.mysql.MySQLDatabase",
+    "includes": ".*",
+    "excludes": "",
+    "inputSchema": "thangvtm_mcare",
+    "packageName": "vn.mcare.system.repository.model",
+    "directory": "src/main/java"
+  }
+}

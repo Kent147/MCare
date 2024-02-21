@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring.version>2.3.0.RELEASE</spring.version>
+    <jooq.version>3.13.2</jooq.version>
+    <jwt.version>3.2.0</jwt.version>
+  </properties>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.0.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <groupId>org.example</groupId>
+  <artifactId>MCare-API</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <!--        <dependency>-->
+    <!--            <groupId>org.springframework.boot</groupId>-->
+    <!--            <artifactId>spring-boot-starter-security</artifactId>-->
+    <!--            <version>${spring.version}</version>-->
+    <!--        </dependency>-->
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jooq</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-log4j2</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>1.4.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.simplejavamail</groupId>
+      <artifactId>simple-java-mail</artifactId>
+      <version>6.0.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.simplejavamail</groupId>
+      <artifactId>batch-module</artifactId>
+      <version>6.0.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.auth0</groupId>
+      <artifactId>java-jwt</artifactId>
+      <version>${jwt.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jooq</groupId>
+      <artifactId>jooq</artifactId>
+      <version>${jooq.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jooq</groupId>
+      <artifactId>jooq-codegen</artifactId>
+      <version>${jooq.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jooq</groupId>
+      <artifactId>jooq-meta</artifactId>
+      <version>${jooq.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.6</version>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.20</version>
+    </dependency>
+
+      <dependency>
+        <groupId>com.zaxxer</groupId>
+        <artifactId>HikariCP</artifactId>
+        <version>3.3.1</version>
+      </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.12</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.17</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>3.17</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.2.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.5</version>
+    </dependency>
+
+    <!--    sms system twilio-->
+    <dependency>
+      <groupId>com.twilio.sdk</groupId>
+      <artifactId>twilio</artifactId>
+      <version>7.55.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.jcraft</groupId>
+      <artifactId>jsch</artifactId>
+      <version>0.1.54</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto -->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-crypto</artifactId>
+      <version>5.3.3.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.itextpdf</groupId>
+      <artifactId>itextpdf</artifactId>
+      <version>5.5.13</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.8</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${spring.version}</version>
+      </plugin>
+
+      <!--Generate Jooq-->
+<!--      <plugin>-->
+<!--        <groupId>org.jooq</groupId>-->
+<!--        <artifactId>jooq-codegen-maven</artifactId>-->
+<!--        <version>3.13.3</version>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <goals>-->
+<!--              <goal>generate</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--        <configuration>-->
+<!--          <jdbc>-->
+<!--            <driver>com.mysql.cj.jdbc.Driver</driver>-->
+<!--            <url>jdbc:mysql://localhost:3306/thangvtm_mcare</url>-->
+<!--            <user>root</user>-->
+<!--            <password>studystudy</password>-->
+<!--          </jdbc>-->
+<!--          <generator>-->
+<!--            <database>-->
+<!--              <name>org.jooq.meta.mysql.MySQLDatabase</name>-->
+<!--              <includes>.*</includes>-->
+<!--              <excludes></excludes>-->
+<!--              <inputSchema>thangvtm_mcare</inputSchema>-->
+<!--              &lt;!&ndash;              <forcedTypes>&ndash;&gt;-->
+<!--              &lt;!&ndash;                <forcedType>&ndash;&gt;-->
+<!--              &lt;!&ndash;                  <userType>java.lang.Long</userType>&ndash;&gt;-->
+<!--              &lt;!&ndash;                  <binding>vn.mcare.system.common.converter.TimestampToLongBinding</binding>&ndash;&gt;-->
+<!--              &lt;!&ndash;                  <types>timestamp</types>&ndash;&gt;-->
+<!--              &lt;!&ndash;                </forcedType>&ndash;&gt;-->
+<!--              &lt;!&ndash;              </forcedTypes>&ndash;&gt;-->
+<!--            </database>-->
+<!--            <generate>-->
+<!--              <records>true</records>-->
+<!--              <fluentSetters>true</fluentSetters>-->
+<!--              <daos>false</daos>-->
+<!--            </generate>-->
+<!--            <target>-->
+<!--              <packageName>vn.mcare.system.repository.model</packageName>-->
+<!--              <directory>src/main/java</directory>-->
+<!--            </target>-->
+<!--          </generator>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
+
+    </plugins>
+  </build>
+</project>

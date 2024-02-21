@@ -1,0 +1,38 @@
+{
+  "sshTunnel": {
+    "sshUser": "thangvtm",
+    "sshPassword": "saddragon45",
+    "sshPort": 22,
+    "sshHost": "103.1.238.149",
+    "databaseHost": "localhost",
+    "databasePort": 3306,
+    "localPort": 9991
+  },
+  "databaseConfig": {
+    "classDriver": "com.mysql.cj.jdbc.Driver",
+    "url": "jdbc:mysql://localhost:3306/thangvtm_mcare",
+    "username": "root",
+    "password": "studystudy",
+    "database": "thangvtm_mcare"
+  },
+  "jooqGenerator": {
+    "jdbcDriver": "com.mysql.cj.jdbc.Driver",
+    "jdbcUrl": "jdbc:mysql://localhost:3306/thangvtm_mcare",
+    "user": "root",
+    "password": "studystudy",
+    "jooqDatabaseName": "org.jooq.meta.mysql.MySQLDatabase",
+    "includes": ".*",
+    "excludes": "",
+    "inputSchema": "thangvtm_mcare",
+    "packageName": "vn.mcare.system.repository.model",
+    "directory": "src/main/java"
+  },
+  "mailConfig": {
+    "username": "thangvtmps09070@fpt.edu.vn",
+    "password": "forgetforgot",
+    "port": 587,
+    "host": "smtp.gmail.com",
+    "auth": "true",
+    "ssl": "smtp.gmail.com"
+  }
+}
